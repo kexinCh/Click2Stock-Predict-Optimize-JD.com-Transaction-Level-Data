@@ -17,6 +17,5 @@ Thumbs.db
 data/database/*.db-shm
 data/database/*.db-wal
 
-outputs/
 
 *.log
