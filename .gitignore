@@ -14,8 +14,12 @@ Thumbs.db
 .mypy_cache/
 .ruff_cache/
 
+data/raw/
+data/processed/
+data/database/
 data/database/*.db-shm
 data/database/*.db-wal
 
+outputs/
 
 *.log
