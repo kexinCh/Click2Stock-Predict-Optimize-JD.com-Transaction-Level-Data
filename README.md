@@ -45,33 +45,32 @@ All updated scripts now default to the organized `data/` and `outputs/` director
 1. Load raw CSVs into SQLite:
 
 ```bash
-python load_jd_data_to_db.py
+python3 load_jd_data_to_db.py
 ```
 
 2. Build click-derived metrics:
 
 ```bash
-python compute_click_order_metrics.py
-python user_click_behavior_metrics.py
+python3 compute_click_order_metrics.py
+python3 user_click_behavior_metrics.py
 ```
 
 3. Create warehouse-level clustering outputs:
 
 ```bash
-python compute_sku_warehouse_train_test_clusters.py --include-clicks
-python build_compare_demand_models.py
-python compare_best_model_vs_baselines.py
+python3 compute_sku_warehouse_train_test_clusters.py --include-clicks
+python3 build_compare_demand_models.py
+python3 compare_best_model_vs_baselines.py
 ```
 
 4. Create region-level outputs:
 
 ```bash
-python Byregion/compute_cluster_region_daily_demand.py
-python Byregion/build_compare_region_demand_models.py
+python3 Byregion/compute_cluster_region_daily_demand.py
+python3 Byregion/build_compare_region_demand_models.py
 ```
 
 ## Notes
 
 - Notebooks were moved into `notebooks/` and their file references were updated to the new layout.
 - If you add new data files, keep raw inputs in `data/raw/` and generated files in `data/processed/` or `outputs/`.
-- The repository is not currently a git repository, so file organization changes were applied directly in place.
